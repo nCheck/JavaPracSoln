@@ -36,45 +36,43 @@ public class Exp22
             Scanner sc =  new Scanner(System.in);
             int[][] kt = new int[5][];
             int i = 0;
-            int m = 0 , d = 1 , e = 2 , o = 3 , c = 4;  
-            while(i<5)
-            {
-                System.out.println("Student " +(i+1) + " Please select Subjects you got KT");
-                int ch = 0;
-                while(ch != 6)
-                {
-                        System.out.println("1:Maths 2:DLDA 3: ECCF 4: OOPM 5: CO 6: EXIT");
-                        ch = sc.nextInt();
-                        if(ch == 6)
-                            break;
-                        System.out.println("Enter marks for " + sub(ch));
-                        int marks = sc.nextInt();
-                        switch(ch)
-                        {
-                            case 1:
-                                kt[m][i] = marks;
-                                break;
-                            case 2:
-                                kt[d][i] = marks;
-                                break;
-                            case 3:
-                                kt[e][i] = marks;
-                                break;
-                            case 4:
-                                kt[o][i] = marks;
-                                break;
-                            case 5:
-                                kt[c][i] = marks;
-                                break;
-                        }                            
-                }
-                i++;
-            }
+            int m  , d , e , o , c ;
+            System.out.println("Enter Number of Students Appearing in");
+            System.out.println("Maths");
+            m = sc.nextInt();
+            System.out.println("DLDA");
+            d = sc.nextInt();
+            System.out.println("ECCF");
+            e = sc.nextInt();
+            System.out.println("OOPM");
+            o = sc.nextInt();
+            System.out.println("CO");
+            c = sc.nextInt();
+            kt[0] = new int[m];
+            kt[1] = new int[d];
+            kt[2] = new int[e];
+            kt[3] = new int[o];
+            kt[4] = new int[c];
+                    System.out.println("Enter Marks of Maths");
+                    for(int k = 0 ; k < kt[0].length ; k++)
+                        kt[0][k] = sc.nextInt();
+                    System.out.println("Enter Marks of DLDA");
+                    for(int k = 0 ; k < kt[1].length ; k++)
+                        kt[1][k] = sc.nextInt();
+                    System.out.println("Enter Marks of ECCF");
+                    for(int k = 0 ; k < kt[2].length ; k++)
+                        kt[2][k] = sc.nextInt();
+                    System.out.println("Enter Marks of OOPM");
+                    for(int k = 0 ; k < kt[3].length ; k++)
+                        kt[3][k] = sc.nextInt();
+                    System.out.println("Enter Marks of CO");
+                    for(int k = 0 ; k < kt[4].length ; k++)
+                        kt[4][k] = sc.nextInt();
             
-            System.out.println("Total number of students appeared in Maths is " + kt[m].length );
-            for(int j = 0 ;j < kt[m].length ; j++ )
+            System.out.println("Total number of students appeared in Maths is " + kt[0].length );
+            for(int j = 0 ;j < kt[0].length ; j++ )
             {
-                System.out.println("Mark "+ j+1 + " is " + kt[m][j]);
+                System.out.println("Mark " +(j+1) +" is " + kt[0][j]);
             }
         }
 }
